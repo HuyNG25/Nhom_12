@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+
+        <!-- TREE -->
+        <record id="view_lich_su_thay_doi_tree" model="ir.ui.view">
+            <field name="name">lich_su_thay_doi_tree</field>
+            <field name="model">lich_su_thay_doi</field>
+            <field name="arch" type="xml">
+                <tree string="📜 Lịch sử thay đổi">
+                    <field name="ngay_thay_doi"/>
+                    <field name="phong_id"/>
+                    <field name="nguoi_muon_id"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM -->
+        <record id="view_lich_su_thay_doi_form" model="ir.ui.view">
+            <field name="name">lich_su_thay_doi_form</field>
+            <field name="model">lich_su_thay_doi</field>
+            <field name="arch" type="xml">
+                <form string="📜 Lịch sử thay đổi">
+                    <sheet>
+                        <group>
+                            <field name="ngay_thay_doi"/>
+                            <field name="phong_id"/>
+                            <field name="nguoi_muon_id"/>
+                            <field name="trang_thai"/>
+                            <field name="thoi_gian_muon_thuc_te"/>
+                            <field name="thoi_gian_tra_thuc_te"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_lich_su_thay_doi" model="ir.actions.act_window">
+            <field name="name">📜 Lịch sử thay đổi</field>
+            <field name="res_model">lich_su_thay_doi</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>
